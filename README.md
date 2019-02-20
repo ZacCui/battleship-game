@@ -13,7 +13,7 @@ This project is cross-platform and supports Mac OS / Windows / Linux.
 ## Creating .NET project
 
 You can use various dotnet CLI commands to set up and run a new project, e.g.
-```csharp
+```
 dotnet new console
 dotnet run
 ```
