@@ -1,6 +1,6 @@
 # Battleship
 
-This is the Battleship game seed .NET Core project. You should use it as a starting point for implementing Flare's take-home excercise.
+This is the Battleship game seed .NET Core project. You should use it as a starting point for implementing Flare's take-home exercise
 
 This project is cross-platform and supports Mac OS / Windows / Linux.
 
