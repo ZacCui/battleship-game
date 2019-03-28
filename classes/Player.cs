@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace battleship_dotnet
 {
@@ -22,16 +21,7 @@ namespace battleship_dotnet
 
         public Boolean isVaildInBoardRange(List<int> xs, List<int> ys)
         {
-            foreach (var x in xs)
-            {
-                if (!Enumerable.Range(0, this.board.height).Contains(x)) return false;
-            }
-
-            foreach (var y in ys)
-            {
-                if (!Enumerable.Range(0, this.board.width).Contains(y)) return false;
-            }
-            return true;
+            return this.board.isVaildInBoardRange(xs, ys);
         }
 
         public Boolean isShipOverlapped(int x1, int y1, int x2, int y2)

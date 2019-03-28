@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace battleship_dotnet
 {
@@ -19,6 +20,20 @@ namespace battleship_dotnet
             this.width = width;
             this.height = height;
             this.gameBoard = new int[height, width];
+        }
+
+        public Boolean isVaildInBoardRange(List<int> xs, List<int> ys)
+        {
+            foreach (var x in xs)
+            {
+                if (!Enumerable.Range(0, this.height).Contains(x)) return false;
+            }
+
+            foreach (var y in ys)
+            {
+                if (!Enumerable.Range(0, this.width).Contains(y)) return false;
+            }
+            return true;
         }
 
         public Boolean isOverlapped(int x1, int y1, int x2, int y2)
