@@ -1,0 +1,21 @@
+Player A
+Ship A 2 2 3 3
+Ship A 3 3 3 3
+Ship A 4 4 4 4
+Player B 
+Ship B 0 5 2 9
+Start
+Attack B 1 6
+Attack A 1 2
+Attack B 5 5
+Attack A 3 2
+Attack B 2 8
+Attack A 3 3
+Attack B 1 3
+Attack A 2 2
+Attack B 0 8
+Attack A 2 3
+Attack B 9 9
+Attack A 10 10
+Attack B 0 6
+Attack A 4 4
