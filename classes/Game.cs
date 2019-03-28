@@ -31,9 +31,11 @@ namespace battleship_dotnet
                 var cmd = input.Split(' ');
                 switch (cmd[0])
                 {
+                    // Smaple input: Player A
                     case "Player":
                         if (!this.started) this.addPlayer(cmd[1]);
                         break;
+                    // Smaple input: Ship A 1 2 3 4
                     case "Ship":
                         if (!this.started)
                         {
@@ -44,8 +46,9 @@ namespace battleship_dotnet
                             this.addBattleShip(cmd[1], x1, y1, x2, y2);
                         }
                         break;
+                    // Smaple input: Start
                     case "Start":
-                        if (playOrder.Count < 2)
+                        if (players.Count < 2)
                         {
                             Console.WriteLine($"Please add more players first");
                         }
@@ -54,6 +57,7 @@ namespace battleship_dotnet
                             this.started = true;
                         }
                         break;
+                    // Smaple input: Start
                     case "Attack":
                         if (this.started)
                         {
@@ -64,9 +68,11 @@ namespace battleship_dotnet
                             this.next();
                         }
                         break;
+                    // Smaple input: End
                     case "End":
                         this.end();
                         break;
+                    // Other invaild inputs
                     default:
                         Console.WriteLine("Please enter correct instructions");
                         break;
@@ -116,6 +122,7 @@ namespace battleship_dotnet
             return players[player].lost();
         }
 
+        // Add a player with given name
         public void addPlayer(string name)
         {
             if (players.ContainsKey(name))
@@ -128,6 +135,7 @@ namespace battleship_dotnet
             playOrder.Add(player.name);
         }
 
+        // Check the whether the shape of ship is vaild on board
         private Boolean isVaildBattleShip(string player, int x1, int y1, int x2, int y2)
         {
             // The value of bottom right point cannot larger than the top left point
@@ -159,6 +167,7 @@ namespace battleship_dotnet
             players[player].addBattleShips(x1, y1, x2, y2);
         }
 
+        // Attack other player with given point
         public void attack(string player, int x, int y)
         {
 

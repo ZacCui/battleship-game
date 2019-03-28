@@ -6,13 +6,13 @@ namespace battleship_dotnet
 {
     class BattleShip
     {
-        // Top left point
+        // Top left point (x1,y1) of the ship 
         public int x1 { get; }
         public int y1 { get; }
-        // Bottom right point
+        // Bottom right point (x2,y2) of the ship
         public int x2 { get; }
         public int y2 { get; }
-        public int length { get; }
+        public int totalPoints { get; }
 
         public HashSet<string> hitPoints = new HashSet<string>();
         public BattleShip(int x1, int y1, int x2, int y2)
@@ -21,7 +21,7 @@ namespace battleship_dotnet
             this.x2 = x2;
             this.y1 = y1;
             this.y2 = y2;
-            this.length = (Math.Abs(x1 - x2) + 1) * (Math.Abs(y1 - y2) + 1);
+            this.totalPoints = (Math.Abs(x1 - x2) + 1) * (Math.Abs(y1 - y2) + 1);
         }
 
         public Boolean isAttacked(int x, int y)
@@ -41,7 +41,7 @@ namespace battleship_dotnet
 
         public Boolean isSunk()
         {
-            return length == hitPoints.Count;
+            return totalPoints == hitPoints.Count;
         }
     }
 };
