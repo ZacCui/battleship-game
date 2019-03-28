@@ -6,7 +6,7 @@ Player B                    # Add player with name B
 Ship B 5 5 5 5              # Add a ship at (5,5) for B
 Player C                    # Add player with name B
 Ship C 6 6 6 6              # Add a ship at (6,6) for C
-Start                       # Game Start once all players put their ships on boards. Not able to add more players and ships from now on.  
+Start                       # All players put their ships on boards and game started. Not able to add more players and ships from now on.  
 Attack B 5 5                # A's turn and Attack B's ship at (5,5)
 Attack A 0 0                # C's turn as B has lost, attack A's ship at (0,0)
 Attack C 6 6                # A's turn and Attack B's ship at (6,6). A wins.
