@@ -43,10 +43,6 @@ dotnet new console
 
 1. Read sample games from `.txt` files
 
-```
-$ dotnet run < sample-game.txt
-```
-
 **sample-game.txt**
 
 ```
@@ -62,6 +58,20 @@ Start                       # All players put their ships on boards and game sta
 Attack B 5 5                # A's turn and Attack B's ship at (5,5)
 Attack A 0 0                # C's turn as B has lost, attack A's ship at (0,0)
 Attack C 6 6                # A's turn and Attack B's ship at (6,6). A wins.
+```
+
+```
+$ dotnet run < sample-game.txt
+Game stated! Please give instructions!
+Current Player: A
+Attack to B at (5,5) hit
+Player: B has lost
+Current Player: C
+Attack to A at (0,0) hit
+Current Player: A
+Attack to C at (6,6) hit
+Player: C has lost
+A is the winner!!!
 ```
 
 2. Type the instructions to `stdin`
