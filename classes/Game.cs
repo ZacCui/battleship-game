@@ -8,7 +8,7 @@ namespace battleship_dotnet
     {
         private Boolean running = false;
         private int currentPlayer = 0;
-        private List<string> playWhoLost = new List<string>();
+        private List<string> playerWhoLost = new List<string>();
         private List<string> playOrder = new List<string>();
         private Boolean showBoard = false;
         private Boolean started = false;
@@ -90,14 +90,14 @@ namespace battleship_dotnet
             running = false;
             currentPlayer = 0;
             playOrder.Clear();
-            playWhoLost.Clear();
+            playerWhoLost.Clear();
             players.Clear();
         }
 
         // take the next round
         public void next()
         {
-            if (playWhoLost.Count != 0 && players.Count - playWhoLost.Count == 1)
+            if (playerWhoLost.Count != 0 && players.Count - playerWhoLost.Count == 1)
             {
                 Console.WriteLine($"{playOrder[currentPlayer]} is the winner!!!");
                 this.end();
@@ -182,7 +182,7 @@ namespace battleship_dotnet
                         players[player].addToSunklist(ship);
                         if (lost(player))
                         {
-                            playWhoLost.Add(player);
+                            playerWhoLost.Add(player);
                             Console.WriteLine($"Player: {player} has lost");
                         }
                     }
